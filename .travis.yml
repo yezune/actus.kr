@@ -8,7 +8,7 @@ d:
   - dmd-2.066.1
 
 before_install:
-  - mkdir ${HOME}/actus.kr/public/files
+  #- mkdir ${HOME}/actus.kr/public/files
   # U
   #- LEVELDB_VER=1.16
   #- curl -fsSL https://github.com/google/leveldb/archive/v${LEVELDB_VER}.tar.gz | tar -C ${HOME} -xzf -
