@@ -183,7 +183,8 @@ col.caption {
 	background-image:     -ms-linear-gradient(top, #9dcadf, #657795);
 	background-image:      -o-linear-gradient(top, #9dcadf, #657795);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9dcadf', endColorstr='#657795');
-	text-shadow:#000 0 -1px 0;
+	/*text-shadow:#000 0 -2px 0;*/*/
+	font-weight: bold;
 	color: #eee;
 	height: 108px;
 	border-bottom: 1px solid #2b3e5d;
@@ -206,7 +207,7 @@ col.caption {
 #header #title {
 	position: absolute;
 	left: 250pt;
-	top: 27pt;
+	top: 40pt;
 }
 
 #header a#download {
