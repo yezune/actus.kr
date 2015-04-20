@@ -1,7 +1,7 @@
 extends layout
 
 block title
-	- string title = "연락처";
+	- string title = "블로그";
 
 block body
 

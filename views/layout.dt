@@ -10,7 +10,7 @@ html(lang="en-US")
 			link(rel="stylesheet", href="#{req.rootDir}styles/default.css", type="text/css")
 			link(rel="stylesheet", href="#{req.rootDir}styles/vibelog.css", type="text/css")
 		- else
-			title vibe.d
+			title actus
 			link(rel="stylesheet", href="#{req.rootDir}styles/home.css", type="text/css")
 
 		link(rel="stylesheet", href="#{req.rootDir}prettify/prettify.css", type="text/css")
@@ -18,23 +18,15 @@ html(lang="en-US")
 		link(rel="alternate", type="application/rss+xml", title="RSS", href="#{req.rootDir}blog/feed/rss")
 		
 		meta(name="viewport", content="width = device-width")
-		meta(name="keywords", lang="en", content="vibe framework, asynchronous, event based, web framework, network library")
-		meta(name="keywords", lang="de", content="vibe framework, asynchron, ereignis-basiert, web framework, netzwerk-bibliothek")
-
-		script(type="text/javascript", src="#{req.rootDir}prettify/prettify.js")/**/
-		
+		meta(name="keywords", lang="en", content="actus community currency, local currency, green money, crypto currency, p2p currency, blockchain currency")
+	
 	body(onload="prettyPrint()")
 
 		.center-content
 			#header
 				#logo-line
-					a(href="http://vibed.org/")
-						img#logo(src="#{req.rootDir}images/logo.png", alt='actus logo')
-						img#title(src="#{req.rootDir}images/title.png", alt='actus banner')
-					a#download(href="#{req.rootDir}download")
-						.downloadArrow
-						strong Download
-						#download-version #{req.params["latestRelease"]} beta
+					a(href="http://actus.kr/")
+						img#logo(src="#{req.rootDir}images/logo-small.png", alt='actus logo')
 
 			block plainbody
 
@@ -43,13 +35,10 @@ html(lang="en-US")
 					#navigation
 						nav#global-nav
 							ul
-								- auto pages = ["Home", "", "Download", "download", "News", "blog", "Features", "features", "Documentation", "docs", "Community", "community", "Development", "developer", "About", "about"];
+								- auto pages = ["엑투스는","about", "무엇을 하나요?","what", "어떻게 하나요?","how", "왜 공동체 화폐인가요?","why", "블로그","blog", "연락처","contact"];
 								- for( auto i = 0; i < pages.length; i += 2 )
 									li(class='nav-#{i > 0 ? pages[i+1] : "home"}')
 										a(class='#{pages[i] == title ? "active" : ""}', href="#{req.rootDir~pages[i+1]}")= pages[i]
-
-						nav#document-nav
-							block navigation
 					#maincontent
 						h1 #{title}
 
@@ -58,11 +47,11 @@ html(lang="en-US")
 				.clear
 		#footer
 			p
-				a(href="#{req.rootDir}impressum") Impressum
+				a(href="#{req.rootDir}about#address") 찾아오는길
 				| –
-				a(href="#{req.rootDir}about#license") License
+				a(href="#{req.rootDir}about#license") 라이센스
 				| –
-				a(href="#{req.rootDir}contact") Contact
-			p Copyright © 2012-2014 <a href="http://rejectedsoftware.com">rejectedsoftware e.K.</a>
+				a(href="#{req.rootDir}contact") 연락처
+			p 저작권 © 2009-2015 <a href="http://actus.kr">엑투스 협동조합</a>
 
 		#vgrid-overlay

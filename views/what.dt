@@ -1,7 +1,7 @@
 extends layout
 
 block title
-	- string title = "엑투스는";
+	- string title = "무엇을 하나요?";
 
 block navigation
 	ul

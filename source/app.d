@@ -8,13 +8,13 @@ version(Have_vibelog) import vibelog.vibelog;
 
 string s_latestVersion = "0.7.18";
 
-void download(HTTPServerRequest req, HTTPServerResponse res)
-{
-	if( auto pf = "file" in req.query ){
-		if( (*pf).startsWith("zipball") ) res.redirect("https://github.com/rejectedsoftware/vibe.d/" ~ *pf);
-		else res.redirect("http://actus.kr/files/" ~ *pf);
-	} else res.render!("download.dt", req);
-}
+//void download(HTTPServerRequest req, HTTPServerResponse res)
+//{
+//	if( auto pf = "file" in req.query ){
+//		if( (*pf).startsWith("zipball") ) res.redirect("https://github.com/actus/actus.kr/" ~ *pf);
+//		else res.redirect("http://actus.kr/files/" ~ *pf);
+//	} else res.render!("download.dt", req);
+//}
 
 void error(HTTPServerRequest req, HTTPServerResponse res, HTTPServerErrorInfo error)
 {
@@ -107,7 +107,7 @@ shared static this()
 	setLogFile("log.txt", LogLevel.info);
 
 	auto settings = new HTTPServerSettings;
-	settings.hostName = "vibed.org";
+	settings.hostName = "actus.kr";
 	settings.port = 8003;
 	settings.bindAddresses = ["127.0.0.1"];
 	settings.errorPageHandler = toDelegate(&error);
@@ -119,20 +119,14 @@ shared static this()
 		version(Have_ddox) req.params["docsVersions"] = s_docsVersions;
 	});
 	router.get("/",          staticTemplate!"home.dt");
+	router.get("/who",          staticTemplate!"who.dt");
+	router.get("/what",          staticTemplate!"what.dt");
+	router.get("/how",          staticTemplate!"how.dt");
+	router.get("/why",          staticTemplate!"why.dt");
 	router.get("/about",     staticTemplate!"about.dt");
+	router.get("/blog",     staticTemplate!"blog.dt");
 	router.get("/contact",   staticTemplate!"contact.dt");
-	router.get("/community", staticTemplate!"community.dt");
-	router.get("/impressum", staticTemplate!"impressum.dt");
-	router.get("/download",  &download);
-	router.get("/features",  staticTemplate!"features.dt");
-	router.get("/docs",      staticTemplate!"docs.dt");
-	router.get("/developer", staticTemplate!"developer.dt");
-	router.get("/style-guide", staticTemplate!"styleguide.dt");
-	router.get("/templates", staticRedirect("/templates/"));
-	router.get("/templates/", staticRedirect("/templates/diet"));
-	router.get("/templates/diet", staticTemplate!"templates.dt");
-	router.get("/temp/d-programming-language.org/*", &redirectDlangDocs);
-	router.get("/temp/dlang.org/*", &redirectDlangDocs);
+
 
 	auto fsettings = new HTTPFileServerSettings;
 	fsettings.maxAge = 0.seconds();
@@ -141,9 +135,9 @@ shared static this()
 	version(Have_vibelog)
 	{
 		auto blogsettings = new VibeLogSettings;
-		blogsettings.configName = "vibe.d";
+		blogsettings.configName = "actus.kr";
 		blogsettings.databaseHost = "127.0.0.1";
-		blogsettings.siteUrl = URL("http://vibed.org/blog/");
+		blogsettings.siteUrl = URL("http://actus.kr/blog/");
 		blogsettings.textFilters ~= &prettifyFilter;
 		registerVibeLog(blogsettings, router);
 	}
@@ -153,20 +147,20 @@ shared static this()
 		updateDocs();
 		auto docsettings = new GeneratorSettings;
 		docsettings.navigationType = NavigationType.ModuleTree;
-		docsettings.siteUrl = URL("http://vibed.org/api");
+		docsettings.siteUrl = URL("http://actus.kr/api");
 		registerApiDocs(router, m_rootPackage[""], docsettings);
 		foreach (ver, pack; m_rootPackage) {
 			auto docsettings = new GeneratorSettings;
 			docsettings.navigationType = NavigationType.ModuleTree;
-			docsettings.siteUrl = URL("http://vibed.org/api");
-			if (!ver.length) docsettings.siteUrl = URL("http://vibed.org/api");
-			else docsettings.siteUrl = URL("http://vibed.org/api-"~ver);
+			docsettings.siteUrl = URL("http://actus.kr/api");
+			if (!ver.length) docsettings.siteUrl = URL("http://actus.kr/api");
+			else docsettings.siteUrl = URL("http://actus.kr/api-"~ver);
 			registerApiDocs(router, pack, docsettings);
 		}
 	}
 
 	listenHTTP(settings, router);
 
-	updateDownloads();
-	setTimer(10.seconds(), {updateDownloads();}, true);
+	//updateDownloads();
+	//setTimer(10.seconds(), {updateDownloads();}, true);
 }
