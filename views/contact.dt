@@ -5,15 +5,13 @@ block title
 
 block body
 
-	p The primary way to get in touch is the
-		a(href="nntp://news.rejectedsoftware.com:119/") news group
-		| or the
-		a(href="http://news.rejectedsoftware.com/") web forum
-		|, which is a front end to the newsgroup.
-	
-	p If you need non-public contact, you can either use the
-		a(href="mailto:info@rejectedsoftware.com") central mailbox
-		| or contact us on our personal email accounts.
+	h2 연락처: 
 
+	b   전화: 02-564-8418
+		팩스: 02-569-8418
+		이메일: info@actus.kr
+		주소: 서울시 관악구 남현2길 62, 2층 (남현동, 인성빌딩)
+		2F, Inseong Bldg, 62, Namhyeon 2-gil, Gwanak-gu, Seoul, Korea
 
+	h2: 지도:
 	p <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6332.689937993684!2d126.975583!3d37.476185!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x407a2c5a60950887!2z7J247ISx67mM65Sp!5e0!3m2!1sko!2skr!4v1429553268712" width="600" height="450" frameborder="0" style="border:0"></iframe>
