@@ -167,6 +167,6 @@ shared static this()
 
 	listenHTTP(settings, router);
 
-	//updateDownloads();
-	//setTimer(10.seconds(), {updateDownloads();}, true);
+	updateDownloads();
+	setTimer(10.seconds(), {updateDownloads();}, true);
 }

@@ -6,7 +6,7 @@ html(lang="en-US")
 
 		link(rel="stylesheet", href="#{req.rootDir}styles/common.css", type="text/css")
 		- if( title.length )
-			title #{title} - vibe.d
+			title #{title} - actus
 			link(rel="stylesheet", href="#{req.rootDir}styles/default.css", type="text/css")
 			link(rel="stylesheet", href="#{req.rootDir}styles/vibelog.css", type="text/css")
 		- else
@@ -29,8 +29,8 @@ html(lang="en-US")
 			#header
 				#logo-line
 					a(href="http://vibed.org/")
-						img#logo(src="#{req.rootDir}images/logo.png", alt='vibe.d logo')
-						img#title(src="#{req.rootDir}images/title.png", alt='vibe.d beta banner')
+						img#logo(src="#{req.rootDir}images/logo.png", alt='actus logo')
+						img#title(src="#{req.rootDir}images/title.png", alt='actus banner')
 					a#download(href="#{req.rootDir}download")
 						.downloadArrow
 						strong Download
