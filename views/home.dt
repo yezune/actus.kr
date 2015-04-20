@@ -1,0 +1,114 @@
+extends layout
+
+block title
+	- string title = "";
+	meta(name="description", content="Powerful asynchronous I/O and web toolkit for D, providing a fiber based blocking programming model and an efficient API.")
+
+block plainbody
+	h1(style="display: none;") vibe.d
+
+	#features
+		a#forkme(href="https://github.com/rejectedsoftware/vibe.d")
+			img(src="images/github-banner.png",alt="fork vibe.d on github",style="position:absolute; top: 0; right: 0;")
+		p#slogan Asynchronous I/O that doesn’t get in your way, written in
+			a(href="http://dlang.org", target="_blank") D
+		#feat-fast.feat-block
+			h2 Fast
+			ul
+				li
+					em Asynchronous I/O
+					| for maximum speed and minimum memory usage
+				li
+					em Compile-time "Diet" templates
+					| for unparalleled dynamic page speed
+				li Compiled to
+					em native machine code
+				li Integrated
+					em load-balancing*
+				li
+					a(href='features#performance') Read more…
+		#feat-simple.feat-block
+			h2 Simple
+			ul
+				li
+					em Fiber based
+					| blocking programming model for concise and intuitive development
+				li
+					em Compact API
+					| with sensible default choices
+				li
+					em Zero-downtime changes*
+					| allowing safe development on live-systems
+				li
+					em Exception based
+					| error handling
+				li
+					a(href="features#simplicity") Read more…
+		#feat-rad.feat-block
+			h2 Productive
+			ul
+				li Full <em>web application toolkit</em>, including <em>HTTPS</em> support
+				li Native database drivers for <em>MongoDB</em> and <em>Redis</em>
+				li Complete <em>concurrency toolkit</em> and support for <em>low level I/O operations</em>
+				li Support for <em>graphical user interfaces</em>
+				li
+					a(href="features#productivity") Read more…
+		.clear
+
+	#container
+		#navigation
+			h2 Jump to…
+			nav#global-nav
+				ul
+					li.nav-about
+						a(href="about") About
+						p All about the project's motivation, goals and the creators
+					li.nav-download
+						a(href="download") Download
+						p Get the latest release and accompanying material
+					li.nav-blog
+						a(href="blog/") News
+						p Follow the development of vibe.d and stay up to date with news and events
+					li.nav-features
+						a(href="features") Features
+						p View a list of all features explaining how they work and what makes them special
+					li.nav-community
+						a(href="community") Community
+						p Places to <a href="http://forum.rejectedsoftware.com/">get help</a>, <a href="https://github.com/rejectedsoftware/vibe.d/issues">report bugs</a>, and <a href="http://forum.rejectedsoftware.com/groups/rejectedsoftware.vibed/">discuss vibe.d</a> in general
+					li.nav-docs
+						a(href="docs") Documentation
+						p Development documentation including the full <a href="/api/">API reference</a>
+					li.nav-developer
+						a(href="developer") Development
+						p Get involved with vibe's development
+		#example-http-server
+			h2 Example of a simple HTTP server
+			pre.code.prettyprint.lang-d
+				|import vibe.d;
+				|
+				|shared static this()
+				|{
+				|	auto settings = new HTTPServerSettings;
+				|	settings.port = 8080;
+				|
+				|	listenHTTP(settings, &amp;handleRequest);
+				|}
+				|
+				|void handleRequest(HTTPServerRequest req,
+				|                   HTTPServerResponse res)
+				|{
+				|	if (req.path == "/")
+				|		res.writeBody("Hello, World!", "text/plain");
+				|}
+		#example-echo-server
+			h2 Example of an echo server
+			pre.code.prettyprint.lang-d
+				|import vibe.d;
+				|
+				|shared static this()
+				|{
+				|	listenTCP(7, (conn) { conn.write(conn); });
+				|}
+		.clear
+
+		p * Still work-in-progress, implemented by the <a target="_blank" class="extern" hreF="https://github.com/rejectedsoftware/vibedist">vibedist</a> project.

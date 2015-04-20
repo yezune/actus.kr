@@ -1,0 +1,6 @@
+.dub
+*.o
+*.obj
+actus-kr
+log.txt
+dub.selections.json
