@@ -38,7 +38,7 @@ html(lang="en-US")
 					#navigation
 						nav#global-nav
 							ul
-								- auto pages = ["엑투스는","about", "무엇을 하나요?","what", "어떻게 하나요?","how", "왜 공동체 통인가요?","why", "블로그","blog", "연락처","contact"];
+								- auto pages = ["엑투스는","about", "무엇을 하나요?","what", "어떻게 하나요?","how", "왜 공동체 통화인가?","why", "왜 공동체 통화인가?","why", "블로그","blog", "연락처","contact"];
 								- for( auto i = 0; i < pages.length; i += 2 )
 									li(class='nav-#{i > 0 ? pages[i+1] : "home"}')
 										a(class='#{pages[i] == title ? "active" : ""}', href="#{req.rootDir~pages[i+1]}")= pages[i]
@@ -52,9 +52,7 @@ html(lang="en-US")
 				.clear
 		#footer
 			p
-				a(href="#{req.rootDir}about#address") 찾아오는길
-				| –
-				a(href="#{req.rootDir}about#license") 라이센스
+				a(href="#{req.rootDir}about#address") 찾아오시는길
 				| –
 				a(href="#{req.rootDir}contact") 연락처
 			p 저작권 © 2009-2015 <a href="http://actus.kr">엑투스 협동조합</a>

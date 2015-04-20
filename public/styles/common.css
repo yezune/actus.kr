@@ -79,6 +79,7 @@ body {
 
 p {
 	margin-bottom: 6pt;
+	text-align:justify;
 }
 
 
@@ -206,7 +207,7 @@ col.caption {
 
 #header #title {
 	position: absolute;
-	left: 250pt;
+	left: 200pt;
 	top: 40pt;
 }
 

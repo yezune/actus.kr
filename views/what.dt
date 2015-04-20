@@ -4,8 +4,10 @@ block title
 	- string title = "무엇을 하나요?";
 
 block body
+	
+	h1 엑투스는 지역통화를 지원하고 있습니다
 
-	section#description
+	section#suwoncoin
 		h2 수원 시민 화폐
 
 		img.rightFlow(src="images/suwoncoin_poster.jpg")
@@ -28,4 +30,12 @@ block body
  
 		p 사무국은 15일부터 12월15일까지 3개월 동안 실험을 거쳐 가능성과 문제점들을 평가해 이를 보완한 뒤 내년부터 본격 추진을 계획하고 있다. 
 
-	
+	section#gwangjin_gift
+		h2 광진 지역 모바일 상품권
+
+		p '광진 모바일 전자 상품권'은 광진사회경제네트워크가 주간이 되어 구축하고 있는 지역 상품권이다. 광진 모바일 전자 상품권은 지역의 사회적경제 주체들에게 지역화폐를 통해 이웃공동체와 사회적 기업과 협동조합등 사회적기업의 협업을 위해 기획되고 있다. 2015년 지역자원조사와 상품권 설계를 거처 2016년 시범 운영에 들어갈 예정에 있다. 
+
+	section#sungnam_local_currency
+		h2 성남 지역 통화 - 성남 누리
+
+		p 성남 누리 지역 통화는 ...
