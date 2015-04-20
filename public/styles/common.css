@@ -24,23 +24,40 @@ table { border-collapse: collapse; border-spacing: 0; }
   font-weight: bold;
   src: local('Gentium Basic Bold Italic'), local('GentiumBasic-BoldItalic'), url('../fonts/gentiumbasic700i.woff') format('woff');
 }*/
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+/*
+@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+*/
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
-@font-face {
+/*@import url(http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+*/
+
+/*.hn {font-family: 'Hanna';}
+.nbs {font-family: 'Nanum Brush Script';}
+.ng {font-family: 'Nanum Gothic';}
+.ngc {font-family: 'Nanum Gothic Coding';}
+.nm {font-family: 'Nanum Myeongjo';}
+.nps {font-family: 'Nanum Pen Script';}
+*/
+/*@font-face {
   font-family: 'Droid Serif';
   font-style: normal;
   font-weight: 400;
   src: local('Droid Serif'), local('DroidSerif'), url('../fonts/droidserif400r.woff') format('woff');
-}
+}*/
 
 h1, h2, h3, h4 {
-	font-family: 'Droid Serif', serif;
+	font-family: 'Nanum Gothic', serif;
 	font-weight: 400;
 	font-style: normal;
 }
 
 body {
 	background-color: #333333;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Hana", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-size: 10pt;
 	line-height: 14pt;
 	color: #cccccc;
@@ -166,7 +183,8 @@ col.caption {
 	background-image:     -ms-linear-gradient(top, #9dcadf, #657795);
 	background-image:      -o-linear-gradient(top, #9dcadf, #657795);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9dcadf', endColorstr='#657795');
-	color: black;
+	text-shadow:#000 0 -1px 0;
+	color: #eee;
 	height: 108px;
 	border-bottom: 1px solid #2b3e5d;
 	/*margin-left: 20pt;*/

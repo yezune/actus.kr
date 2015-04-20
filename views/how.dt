@@ -30,7 +30,6 @@ block navigation
 				li
 					a(href="#demoscoin") 데모스코인(Demoscoin - 블록체인 2.0)
 block body
-	section#currency_professional
 	h1 공동체 통화의 전문가
 	
 	section#research
