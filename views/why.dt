@@ -6,62 +6,219 @@ block title
 block navigation
 	ul
 		li
-			a(href="#description") What is vibe.d?
+			a(href="#community_currency")한 눈에 보는 공동체 통화
+			ul
+				li
+					a(href="#intro") 공동체 통화 소개
+				li
+					a(href="#what_is") 공동체 통화란?
+				li
+					a(href="#ecosystem") 공동체 통화 생태계
+				li
+					a(href="#social_currency") 사회 통화
+				li
+					a(href="#business_currency") 사업 통화(소상공인 통화)
+				li
+					a(href="#green_currency") 그린 통화(생태 통화)
+	ul 
 		li
-			a(href="#motivation") Why vibe.d?
-		li
-			a(href="#who") Who makes vibe.d?
-		li
-			a(href="#license") License
+			a(href="#What_to_do")공동체 통화가 하는 일
+			ul
+				li
+					a(href="#green_consumption") 녹색 소비
+				li
+					a(href="#strong_smes") 건강한 중소기업
+				li
+					a(href="#neighbourhoods") 이웃 공동체
+				li
+					a(href="#clean_energy") 청정 에너지 투자
+				li
+					a(href="#coproduction") 공동 생산의 촉진
+				li
+					a(href="#local_buying") 지역 구매 활성화
+				li
+					a(href="#resilient_regins") 지역 재생
+				li
+					a(href="#mutual_care") 상호 부조
+				li
+					a(href="#green_behaviour") 친환경 활동 촉진하는 - 녹색 통화
 
 block body
 
-	section#description
-		h2 What is vibe.d?
+	h1 한 눈에 보는 공동체 통화
 
-		p The foremost purpose of vibe.d is to provide a toolkit for doing asynchronous I/O in a familiar and natural procedural style. It combines the intuitive and efficient programming style of synchronous I/O with the scalability of asynchronous I/O.
+	section#intro
+		h2 공동체 통화 소개
 
-		p Apart from actual I/O operations, it provides all the usual primitives for general programming tasks, such as timers, message passing, synchronization primitives (mutexes and condition variables), pipes and more. Care has also been taken to make sure that it integrates well with the event loop for the user interface, so that it can be used to power GUI based applications, too.
+		p 통화는 인간이 만들어낸 사회적 발명이다. 우리는 통화를 필요에 맞게 재설계 할 수 있다.
+ 
+		p 전통적으로 우리가 알고 있는 통화란 무엇일까요? 돈은 자연에서 주어진 것이 아닙니다. 비록 잘 인식되지 않지만 우리가 사용하는 돈은 근본적으로 선택된 것입니다. 전통적인 돈은 상업적인 은행에서 채무(빚)로 창조 됩니다. 이 돈은 이자와 최초의 은행의 인플레이션에 의존합니다.  전통적인 돈의 기능이 작동하기 위해 성립된 시스템은 구조적으로 경제 성장을 필요로 합니다. 구조적인 경제 성장은 우리 인간의 필요와 지구의 생태 환경의 한계를 무시하고 있습니다. 이 시스템은 사람과 지구를 위해 작동하지 않습니다
 
-	section#motivation
-		h2 Why vibe.d?
+	section#what_is
+		h2 공동체 통화란?
 
-		p Web development has seen a huge innovative jump in the last years. Frameworks such as
-			a.extern(href="http://rubyonrails.org/") Ruby on Rails
-			| or 
-			a.extern(href="http://nodejs.org/") node.js
-			| and several other frameworks have changed the landscape of the CGI and PHP based 
-			| web considerably.
+		p 인간이 돈을 만들어낸 이후로, 돈은 경제 영역이나 지역 커뮤니티의 특정 목적에 맞추어 재발명 되었습니다. 커뮤니티 화폐는 경제적, 정책적 그리고 사회적 도구입니다. 또한 커뮤니티 통화는 전통적인 통화의 보충 화폐 운영될 수 있습니다. 이런 특성은 전통 화폐의 다루지 못한 문제와 이슈들을 만나게 됩니다. 
+		ul 
+		공동체 통화는 다양한 목적을 만족 시킬 수 있습니다:
+			li 생산과 소비의 지역화를 통해 지역 경제 발전을 자극
+			li 활성화된 시민사회 구축
+			li 자원 봉사 자극
+			li 의료 시스템의 비용 절감
+			li 지속 가능한 소비를 장려와 폐기물 분리수거 증진
 
-		p New programming paradigms have emerged to make web apps manageable to facilitate a 
-			| clean application design. Node.js was the first to succeed in bringing the
-			| performance of asynchronous I/O to the masses - albeit at the cost of a
-			| convoluted programming style using callbacks and with a dynamically typed
-			| language that relies heavily on unit tests to catch common programming errors.
+	section#ecosystem
+		h2  공동체 통화 생태계
 
-		p With vibe.d we are trying to bring the highest performance possible together with a
-			| programming interface that is as clean as possible. At the same time the choice of
-			a.extern(href="http://dlang.org/") D
-			| as the programming language leads to code that provides much less potential for errors
-			| thanks to it's comprehensive static type system. Still, D's clean syntax gives you
-			| nearly the same lean programming experience as in dynamically typed scripting languages.
-
-		p The combination is a very fast and practical system that provides a solid basis for many typical web applications and services, as well as non-web services.
-
-	section#who
-		h2 Who makes vibe.d?
-
-		p We are a small group of people that was tired of slow, bloated or inconvenient frameworks or languages for web application development. Node.js was a promising change with its speed and the rich set of extension libraries. However, the complete reliance on callbacks makes node.js code quite involved to read and write. And worse, error handling is far too easy to ignore. After realizing that fibers would be the ideal tool to keep the performance and memory benefits of event based I/O while getting back the simplicity of blocking I/O, the idea of vibe.d was born.
-
-	section#license
-		h2 License
-
-		p vibe.d is licensed under the terms of the MIT public license:
+		p 커뮤니티 통화는 다양한 방식을 설계 운영될 수 있다. 커뮤니티 통화는 보상 프로그램의 형태, 투자 기획, 신용카드 기획, 저축 계좌 형태 그리고 전통적인 은행 상품 형태로 만들 수 있습니다.
 		
-		pre Copyright (c) 2012-2014, rejectedsoftware e.K.
-			|
-			|Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-			|
-			|The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-			|
-			|THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+		ul
+		커뮤니티 통화는 그 범위에 따라 다양한 영역이 있고, 몇 가지 카테고리를 분류하면:
+			li 사회적 통화(Social Currencies) – 모든 사람의 기여를 동등하게 평가하는 시간에 기반한 통화. 이 통화는 사회적 목적에 기여하거나 커뮤니티에 기여한 구성원들에 대한 보상의 형식으로 기획된다.
+
+			li 비지니스 통화(Business Currencies) – 지역간 또는 커뮤니티간 거래(B2B, B2C)를 촉진하기 위해 고안된 화폐이다. 비지니스 통화는 지역 생산과 소비의 촉진을 목적으로 한다. 특히 비지니스 통화는 현대적인 물물교환(Barter),  거래 교환(Trade Exchange), 지역통화 형태로 이루어진다.
+			
+			li 녹색 통화(Green Currencies) –녹색 통화는 시민 또는 소비자에게 환경 지속성과 이산화탄소 배출 감소 등의 활동을 증진하는 것을 목적으로 기획 되었다. 녹생 통화는 환경 친화적인 활동을 지속할 수 있게 하는 보상과 증진에 사용할 수 있는 도구입니다. 예를 들면 대중 교통이용, 지역 구매, 박람회,  제철 식품의 소비, 재생 에너지로 전환 등에 사용될 수 있습니다.
+
+	section#social_currency
+		h2 사회 통화
+
+		h3 사회 통화(Social Currencies) - 살림살이를 위한 화폐.
+ 
+		p 사회 통화는 사회적 소외를 해결하고 커뮤니티를 구축하는 시민 의식을 증진 시키는 수단으로 활용할 수 있다.  이런 커뮤니티 통화는 공공 서비스의 전달에 있어 시민의 참여와 협력을 촉진하는 효과적인 정책 수단이다.  간단히 말해서, 사회적 통화는 시민 활동에 대한 보상을 하는 제도입니다.  상호 자원 봉사 활동을 촉진하고 지역 사회를 위한 소중한 자산으로 무급으로 시간을 할애합니다. 지방 정부 기관, 시민 사회 단체와 공공 서비스 제공자는 이러한 사회 통화 시스템의 출발점입니다.
+ 
+		h3 우리의 시간은 평등하다 (Time is equality)
+ 
+		p 사회 통화는 시간 은행(timebanking)을 구축 할 수 있습니다. 이 시간 은행에 참여하는 사람들은 시간이 표시된 신용(크레딧)으로 보상 받는 데 적극적으로 참여하게 된다. 취득 점수는 시간 통화의 발행 기관에서 서비스에 사용하거나 선물이나 할인의 방법으로 지역 소매점에서 사용하실 수 있습니다. 이 통화는 공동 생산(co-production)의 중요한 기반이 될 수 있습니다. 공동 생산은 공공 서비스를  상호 호혜와 평등을 기반으로 서비스 전문가(의료 체계에서 의사와 간호사등)와 일반인이 함께 그들의 가족과 이웃에게 전달하는  체계입니다.  사회 통화는 시민을 위한 새로운 기회를 제공합니다. 지역 사회에 적극적으로 관여하는 사람들을 자극함으로써, 그들의 우정을 확장하여 새로운 문화를 경험하고 궁극적으로 지역 사회의 더 안전하게 만들 수 있습니다. 이 계획은  정부를 위해 적정 재정을 유지하기 위해 기여할 수 있을 뿐만 아니라 전반적으로, 사회 통화는 생활의 질을 향상 시킬 수 있습니다.
+
+	section#business_currency
+		h2 사업 통화(소상공인 통화) - 강한 중소기업을 키우는 비지니스 통화 (Business Currencies)
+
+		p 비지니스 통화는 경제적 목적을 위해 사용되는 커뮤니티 통화입니다.  경제적 관계와 지역적 관계로 서로 영향을 줄 수 있는 비지니스 통화는 중소기업의 체질을 강화하는 좋은 수단이 될 수 있습니다. 활발한 활동예로는 다음과 같은 경우가 있습니다:
+
+		h3 다자간 역량 교환(Barter Trade, Trade Exchange):
+		
+		p 다자간 물물 교환은 경제 침체나 일반 통화가 부족한 동안 지불 보완 수단을 기업에 제공합니다. 중개자가 거래를  수행하는 현대 물물 교환은 "무역 크레딧"라는 B2B 통화를 사용합니다. 회원은 이 내부 "무역 크레딧"를 사용하여 서로 간의 제품과 서비스를 구매 또는 판매합니다. 물물 교환 참가자는 다음 자신의 일반 현금 거래에 그들의 "무역 크레딧"을 사용하여 다른 회원들로부터 상품 및 서비스를 구매할 수 있다. 물물 교환의 모든 참가자들은 제로의 계정 잔액으로 시작합니다. 각각의 참가자는 물물 교환 시스템 안에 구매를 하면 인출되고 판매를 하면 적립되는 계정을 가지고 있습니다.
+		
+		h3 지역 통화:
+		
+		p 지역 통화는 지리적으로 한정된 지역의 경제적 관계의 개선을 위한 커뮤니티 통화입니다. 지역 통화는 지역 사회, 도시 지역 내 경제적 목적을 위해 사용할 수 있도록 설계됩니다. 지역 통화는 지역 사회의 응집력을 강화하고 지역 기업의 매출을 증대하고 환경을 보호하는 데 도움이 됩니다. 어떻게 설계 하는냐에 따라, 지역 통화는 일반 법정 통화에서는 사용처를 만들지 못했던 지역의 자산을 수요와 연결하는 힘이 있습니다. 그래서, 지역 통화는 특정 지역 내 무역을 촉진하고 무역과 비즈니스의 사회적 성격을 복원 할 수 있습니다. 이러한 지역 통화는 법화를 대체하지 않습니다. 일반적으로 법화를 보완하게 됩니다.
+
+	section#green_currency
+		h2  그린 통화(생태 통화) - 거대한 전환을 위한 통화
+		
+		p 녹색 통화는 사회의 모든 영역에서 환경의 지속성을 증진하기 위해 설계되었습니다. 녹색 통화는 지구별의 생태적 한계에 맞추어 경제 활동을 재조직화 하는 도구입니다.  이러한 활동에는 환경에 영향을 주는 활동을 줄이는 다음과 같은 내용들이 포함됩니다:
+ 
+		p 지역화, 협업과 계절 소비 패턴, 수입 대체, 낭비 방지, 대중교통 이용 및 공유, 신재생 에너지원 사용
+ 
+		p 녹색 통화는 기업과 소비자 그리고 정부가 생산과 소비의 환경적 영향을 감소 시키도록 경제적 환경을 조성하는데 사용됩니다. 이 녹색 통화는 행동 변화 촉진 프로그램입니다.
+
+
+
+	h1 공동체 통화가 하는 일
+
+	section#green_consumption
+		h2 녹색 소비
+
+		p "유한한 세계에서 물질 소비의 무한 성장이 불가능한 것을 깨닫는 것은 단순한 통찰 이상을 필요로 하지 않는다." - 1973년,  E.F. 슈마허
+	
+		p 선진국의 소비 수준은 이미 지구의 수용 한계를 초과한 것은 잘 알려져 있다. ”소비 폭발”이라는 신경제 제단(NEF)의 보고서에 따르면 "미국 시민은 1월 2일의 오전 4시 경에 이미 탄소 배출량에서 탄자니아 시민이 1년간 배출하는 용량을 초과하는 것으로 알려져 있다. 영국 시민은 1월 4일 오후 7시에 의해 같은 지점에 도달한다. 금융 위기로 인한 현재의 잠정 중단을 예외로 하면, 서구 소비자들의 에너지 소비는 계속 증가하고 있다. 2040년이 되면, 에너지 소비 증가는 지구 생태 균형에 보다 심각한 영향을 줄 것이다. 네덜란드의 중앙기획국은 2000년에서 2040년 사이의   50-120%의  낮은 소비 증가율과 150~240%의 추정치의 높은 소비 증가율을 예측하고 실제 시나리오를 개발했다. 이 시나리오에서 천연 자원의 과소비는 지구 주민 모두의 삶의 질에 필연적인 위협과 환경 파괴로 이어질 것이다. 90 년대 초, 연구자들과 정부는 소비자로서 자신의 역할과 시민으로서 자신의 신념이 일치하지 않을 수 있음을 증명하고 있습니다.예를 들어, 시민으로서 나는 세계 야생 동물 재단에 기부하지만, 슈퍼마켓에 갈 때 나는 아직도 지속불가능한  잡은 생선을 구입 합니다. 물론, 더 많은 책임을 행동으로 옮긴 변화의 많은 성공 사례가 있습니다. 하지만  현실을 직시한다면,이 변화는 대전환의 임계점에 도달했다고 할 수 없습니다. 아직 대상이 충족되지 않습니다. 우리는 새로운 긍정적인 도구가 필요합니다.
+
+		h3 새롭게, 다르게 생각하기.
+
+		p 녹색 통화는 환경적 지속 가능성을 촉진하기 위해 설계되었습니다. 이 통화는 사회와 환경의 지속 가능한 소비를 보상함으로써 지속 가능한 경제로 전환하는 것을 목표로 하고 있습니다. 지역 통화의 형태는 설정되어 있는 지역 사회에 따라 다양한 모양과 크기를 취할 수 있습니다. 녹색 구매를 촉진하기 위해 녹색 통화는 로컬 및 독립적으로 소유 기업에 의해 실행 로열티 방식으로 구성 될 수 있습니다. 녹색 통화는 지역의 제철 유기농 식품, 에너지 및 적은 물을 사용하는 가전 제품, 녹색 금융 서비스 및 중고품을 포함한 제품과 서비스 등에 다양하게 적용 할 수 있습니다.
+	
+	section#strong_smes
+		h2 건강한 중소기업 - 강한 중소기업을 만드는 지역 통화
+		
+		p 중소기업들(SMEs)은 건강하고 튼튼한 경제의 중추입니다.  중소기업은 경제 성장의 가장 중요한 엔진이며 많은 고용 기회를 제공하고 있습니다. 지금의 경제위기는 중소기업들에게 큰 영향을 주고 있습니다: 은행 신용 접근의 어려움, 고객의 구매 축소와 지불지연 등의 어려움에 직면하고 있습니다. 결과로 중소기업들의 유동성, 현금 회전율 그리고 수익 마진이 심각하게 하락하고 있습니다. 이러한 하향 나선의 경향은 기업가들의 미래 투자 계획과 혁신을 위한 시간 투자와 노력을 앗아가고 있습니다.
+ 
+		h3 커뮤니티 통화는 사업에 대한 새로운 접근 방법.
+ 
+		p 정부의 보조금이나 은행 대출을 포함하지 별도로, 커뮤니티 통화는 중소 기업들에 자신을 강화하는 기회를 제공을 통해 지역 통화는 무역을 강화하고 중소기업의 성장을 활성화하기 위해 설계 될 수 있습니다.
+ 
+		p 많은 중소기업들이 잠재적 생산력을 활용하지 못하고 있다 : 지역 통화는 사용하지 않는 잠재적인 생산력을 운영하여 새로운 고객을 찾고 추가 판매를 창출하는 방법으로 중소기업 네트워크 내에서 거래를 촉진합니다. 커뮤니티 화폐를 사용하면 현금 흐름을 강화하는 측면에서 사업상 큰 매력으로 작용할 수 있다.
+ 
+		p 다른 사업의 네트워크 내에서 상품 및 서비스를 거래해서 현금 비용을 저장하고 최적의 사용이 가능합니다. 또한, 기업이  무이자 장기 신용 라인에 접근하는 기회와 동시에 다른 기업에 장기적인 관계를 구축하는 기회를 가질 수 있다.
+
+
+
+	section#neighbourhoods
+		h2 이웃 공동체 - 지역 통화를 통해 이웃이 만들어 집니다.
+
+		p 살림살이 경제는 연대를 통해 만들어 집니다. 사람들은 안전하고 좋은 이웃이 있는 환경에서 살고 싶어 합니다. 이러한 환경을 만드는 것은 많은 노력이 들어갑니다. 가난과 치안이 불안한 지역에서 모두가 잘 살 수 있게 환경을 만드는 것은 사화 혁신의 여러 정책과 도구들이 필요 합니다.  사회 통화는 지역의 거주민이 서로 돌보고 커뮤니티에 공헌하도록 환경을 만들어 낼 수 있습니다. 이 통화 프로그램은 지역의 이해 관계자들의 삶의 질을 개선하는 플랫폼으로 구현될 수 있습니다. 사회 통화의 기획에 따라 이웃과 식사를 같이 하는 공동 부엌이나 공동 육아 등을 통해 지역에서 사람들이 시간을 사용하면서 지역의 사회 자본이 강화되는 것이 가능합니다.  또 사회 통화를 통해 공공의 또는 공동체의 자원을 효과적으로 사용하도록 만들 수 있습니다.
+	
+	section#clean_energy
+		h2 청정 에너지 투자
+	
+		h3 청정에너지에 대한 투자 수단: 녹색 화폐
+
+		p 저렴한 석유에 의존하던 시대가 지나가고 신재생 에너지의 시대가 되었습니다. 신재생에너지는 깨끗하고, 환경에 안전하며 쉽게 지역에 운송할 수 있습니다. 태양광 발전, 풍력, 식물 연료등이 분산된 에너지 생산은 이끌고 있습니다.  대양광 패널을 지붕에 올리면 바로 전력 생산자가 될 수 있습니다. 이렇게 생산된 전기는 집에서 사용하거나 지역의 에너지 그리드에 공급할 수 있습니다. 청정 에너지를 얻기 위해서는 많은 투자가 필요합니다. 개인이 감당하기에는 힘든 투자이지요. 먼저 태양발전 패널을 구매할 펀드가 있어야 하지요. 두 번째로 그것을 설치할 장소가 필요하니다. 교외의 집 소유자이거나 단독 주택들의 경우 쉽게 해결이 가능하지만 아파트 거지주나 다가구의 경우 공간의 문제가 쉽지 않습니다. 청정에너지를 소유하기 위해서는 땅과 많은 투자자 그리고 실현하기 위한 강한 추진력을 필요로 합니다.
+
+		h3 에너지 투자 통화로 투자 문제를 해결할 수 있습니다.
+
+		p 공동체 통화는 지역 재생 에너지를 위한 조직화와 재정 투자를 도울 수 있습니다. 프로젝트를 펀딩하고 사람을 모으는것 그리고 자산 및 수익에 대한 에너지 투자 기획을 돕는 도구가 될 수 있습니다. 많은 임대자들이 임대한 집의 설치할 공간의 부족으로 태양광발전의 실현하는데 어려움을 격습니다. 가까운 학교 또는 좀 더 떨어진 곳의 건물 개인 소유이거나 공공 소유의 많은 공간과 지붕이 있지만 금융의 문제로 사용할 수 없는 경우가 많이 있습니다. 하지만 실제 화폐가 아닌 녹색 통화를 발행하면 그들의 참여가 가능합니다.  에너지 공급자는 패널의 설치하기 위한 장소를 얻고, 그 대가로 녹색 통화를 받는 사람은 집에서 자신의 전기세를 녹색 통화로 통해 지불 할 수 있습니다.
+
+	section#coproduction
+		h2 공동생산의 촉진
+
+		h3 공동생산의 달성하는 방법
+		
+		p 현재의 복지 지원 시스템을 지속하는 것은 안밖으로 모두 심각한 상황에 있습니다.  경제 침체의 장기화와 인구 노령화 그리고 건강과 보건 서비스 관련 비용의 급격한 상승은 사회 복지 영역에서 정부와 시민의 역할을 다시 생각 할 것을 요구하고 있습니다. 이 장기적인 과정은 오늘날 복지 체계가 딛고 있는 기반을  본질적 변화로 이끌 것입니다. 예측할 수 있는 미래는 현재의 복지 체계가 몇 가지 지역을 기반으로 선회하는 계획으로 변경될 것이다. 지역에서 제공하는 복지 체계는 자급자족에 근접하고, 다양한 공공 영역과 공동체 서비스를 전달하는 목적으로 할 것이다. 새로운 복지 체계는 복지 서비스를 전달하는 정부와 서비스 받는 시민 간의 높은 수준의 협력과 결합을 특징으로 할 것입니다. 시민들은 단지 이런 복지 서비스를 수동적으로 받는 것이 아니라 서비스 전달의 영역의 적극적인 역할도 요청될 것입니다.
+
+		h3 공동생산의 본질
+		
+		p 공동생산은 평등하고 상호 호혜의 관계속에서 서비스 전문가와 서비스를 사용하는 시민, 가족 또는 이웃이  공공서비스의 전달하는 것을 말합니다. 사회 복지 체계의 전환기에 사회적 대안 통화는 공동생산을 실현하는 도구입니다. 사회적 대안 통화는 공동체에서 적극적인 역활을 구성원들이 할 수 있도록  환경을 만들어 공동 생산을 위한 중추적인 역활을 할 수 있습니다.
+	
+	section#local_buying
+		h2 지역 구매 활성화
+
+		h3 지역에서 구매하기 - 돈이 지역에 머물게 하고 마을을 살아나게 하는 방법입니다.
+ 
+		p 지역의 소상공인들은 지역에서 대기업들의 대규모 체인들과 경쟁하는 상황에 놓여 있습니다. 소규모의 자영 상점들은 전세계의 모든 공동체의 각각의 독특한 스타일과 활동성을 만들어 내는 주체입니다. 이런 자영 상점들은 고용 기회를 제공하고 해외의 주주들에게 이익을 제공하는 대규모 체인들과 달리 지역에 돈이 다시 소비되게 합니다. 많은 연구에서 지역의 자영 상점에서 사용되는 돈이 지역 경제를 재생하는 효과를 보여줍니다. 이것은 이 지역에서 소비된 돈이 타 지역으로 흘러 나가기 전에 몇 번에 걸처 지역 경제에서 순환하기 때문입니다. 이 현상은 지역 승수 효과로 건강한 지역 공동체를 만드는데 기여합니다.  
+		
+		h3 지역 경제를 지원하는 방법 - 지역 공동체 통화
+		
+		p 공동체 통화는 지역의 상품과 서비스를 소비자가 구매하도록 돕는 효과적인 도구입니다. 그리고 지역 경제 활동과 고용 창출을 촉진합니다. 이 전환의 예가 영국 브릭스톤과 브리스톨 입니다. 이 지역 주민은 그들 자신만의 돈을 가지고 있습니다(브리스톨 파운드). 이런 지역통화기획은 지역 상권을 보호하고 주민과 상점주 사이에 경제적 관계를 넘어서는 강한 유대를 만들어 줍니다. 다른 지역 상품 구매 캠페인의 효과보다. 지역 통화는 운송의 필요성을 줄이고 상품과 서비스의 탄소 발생을 줄여 줍니다.
+ 
+	
+	section#resilient_regins
+		h2 지역 재생
+	
+		p 지금의 경제 상황은 많은 지역에서 지역 재생을 위해 재구성이 필요한 상태입니다. 정부는 모든 수준에서 공공 지출을 줄이고 있습니다. 이것은 구조적인 예산 부족의 문제를 해결하기 위해 실행하는 정책들입니다. 이런 예산 감소는 우리 사회에 지속적이고 큰 영향을 가져오게 될 것입니다. 지역 경제에 대한 세계화의 부정적 영향은 대규모 체인 상점들을 포함해서 사업 상의 재배치와 숙련된 고용의 손실로 인한 황폐한 지역사회를 만들어 내고 있습니다. 지역 경제는 세계 경제에 과도하게 편입되고 있습니다. 강한 상호 연결은 분명한 장점을 가지고 있는 반면에 지역의 경제를 실물 경제에서는 하는 일이 적은 현대의 세계 금융 시장 거품에 과도하게 노출 시키는 면이 있습니다.  한국의 지역 배달 시장이 대표적인 예가 될 수 있습니다. 전통적으로 지역에서 음식점들과 지역의 광고 자영업자의 영역 이었던 것이 이제는 세계 배달 음식 마케팅 자본의 시장으로 변화되어 가고 있습니다.  
+		
+		h3 지역 재생을 위한 통화
+
+		p 공동체 통화는 자신의 지역 경제를 지역에서 다시 잡을 수 있는 도구입니다. 공동체 통화는 사람들의 실제 필요, 즉 살림살이에 기반하고 현재의 예측되지 않는 금융 시장에 의존하지 않습니다. 지역 경제가 건강하게 자립할 수 있도록 보호하는 것은 필수입니다.  지역 통화는 상품과 서비스의 거래을 쉽게 하는 네트워크를 형성해서 지역 경제 주체를 자극하는 역활을 합니다. 이런 거래는 지역 안에서 실물 경제를 지속적으로 확장하는 힘을 가지고 있습니다. 지역통화는 지역안에서 가치있는 생산를 자극하고 건강한 지역적 고유의 가치를 만들어 냅니다. 지역 공동체 통화는 자신의 살림살이 경제를 복원하고 더 나은 지역을 만들려는 모든 지역에 꼭 필요한 도구 입니다.
+
+	section#mutual_care
+		h2 상호 부조
+
+		h3 상호 돌봄과 지원
+
+		p 1인 가구가 늘어가고 있는 한국에서 도움을 필요로 하는 순간에 도움을 받지 못하는 노인들이 늘어 가고 있습니다. 이것이 남의 문제일까요?  우리 모두는 미래의 노인이거나 현재의 노인입니다. 우리 사회가 노인을  잘 돌보고 있다고 생각하십니까?  인간을 위한 도구로써, 사회는 외로움에 대처하고 노인 또는 장애인을 돕기 위해 훨씬 더 잘 할 수 있는 기회가 있습니다. 우리는 행복한 사회를 위해 기술과 자원을 더 잘 사용할 수 있습니다.
+
+		h3 사람들이 참여하는 공동체를 만드는 도구: 커뮤니티 통화
+
+		p 자발적인 봉사의  지원의 방법으로 작업 시간과 상호 부조에 기반한  커뮤니티 통화를 만들 수 있습니다. 이런 통화 기획은 공동체를 건강하게 만들어 줍니다.  공동체 화폐는 일반 화폐 경제에서 소외된 공적 서비스의 역할을 적극적으로 시민이 받아들일 수 있도록 촉매 역할을 수행합니다. 공동체 통화는 노인과 돌봄이 필요한 사람들이 서로 돕는 것을 쉽게 만들어 주고  취약 계층의 사람들이 독립된 생활을 유지하도록 돕는 도구입니다.  지원자들은 공동체의 사람들을 돕는데 사용한 시간을 기반으로 신용을 받을 수 있습니다. 이러한 신용은 나중에 공동체의 다른 사람들로부터 비슷한 유형의 도움을 받았을 경우에 사용할 수 있습니다. 노후의 인생을 위해서 저축을 할 수도 있고,  친구 또는 가족이 도움이 필요한 경우 보내줄 수도 있습니다.  공동체에 참여하는 다른 기관의 서비스나 생산물을 살 수 도 있습니다.  
+	
+	section#green_behaviour
+		h2 친환경 활동 촉진하는 - 녹색 통화
+
+		h3 환경 친화적 활동의 촉매제 - 지역 통화
+ 
+		p 기후변화는 현재 인류가 당면한 가장 큰 도전 과제이며 효과적인 해결책이 시급한 분야입니다. 이산화탄소(CO2) 배출은 향 후 50년간 기업과 정부의 주요 의제일 것입니다. 이 환경의 위기는 모든 사회의 구성원이 환경에 악영향을 주는 행위를 줄여갈 때만 효과적으로 제어가 가능합니다. 대부분의 시민은 기후변화가 심각한 문제이고 이산화탄소 배출을 줄여가는 것이 중요함을 알고 있습니다.  그러나 어떠한 방법으로 가능한가 하는 문제는 대부분의 시민들이 알지 못하고 있습니다.  
+
+		h3 녹색 통화는  지속 가능 환경을 위한 효율적인 도구입니다
+
+		p 커뮤니티 화폐는 지속 가능한 환경을 촉진하는 목적으로 설계 가능합니다.  이렇게 설계된 통화는 개개인이 환경에 악영향을 주는 행동을 줄여가도록 합니다.  이런 형식의 커뮤니티 화폐가 녹색 통화(green currencies)입니다.  녹색 화폐는 시민과 비지니스 그리고 공공 영역이 환경을 개선하는 것을 돕습니다. 
+
+		ul 
+		녹색 통화를 통해 다음과 같은 효과를 공동체에 제공할 수 있습니다:
+
+			li 재생 에너지로 전환과 사용 촉진
+			li 자원의 낭비 예방
+			li 물 사용 감소
+			li 지능적인 자원 유동성 제공
+			li 환경 및 사회에 대한  책임 소비
+
+		p 추가적으로 녹색 화폐는 신재생 에너지 시대에  물부족 대응이나, 식물을 이용한 정수 시스템과 같은 녹색 기술 솔루션을 위한 투자 방안으로 설계할 수 있습니다.

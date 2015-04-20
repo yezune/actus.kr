@@ -1,67 +1,35 @@
 extends layout
 
 block title
-	- string title = "";
-	meta(name="description", content="지역통화, 공동체 통화, 재래시장 전자 상품권의 든든한 파트너 엑투스.")
+	- string title = "공동체 통화 파트너";
 
-block plainbody
-	h1(style="display: none;") 엑투스 공동체 통화
+block navigation
+	ul
+		li
+			a(href="#who_are_you") 엑투스를 소개합니다
+		li
+			a(href="#mission") 우리의 사명
 
 
-	#container
-		#navigation
-			h2 Jump to…
-			nav#global-nav
-				ul
-					li.nav-about
-						a(href="about") About
-						p All about the project's motivation, goals and the creators
-					li.nav-download
-						a(href="download") Download
-						p Get the latest release and accompanying material
-					li.nav-blog
-						a(href="blog/") News
-						p Follow the development of vibe.d and stay up to date with news and events
-					li.nav-features
-						a(href="features") Features
-						p View a list of all features explaining how they work and what makes them special
-					li.nav-community
-						a(href="community") Community
-						p Places to <a href="http://forum.rejectedsoftware.com/">get help</a>, <a href="https://github.com/rejectedsoftware/vibe.d/issues">report bugs</a>, and <a href="http://forum.rejectedsoftware.com/groups/rejectedsoftware.vibed/">discuss vibe.d</a> in general
-					li.nav-docs
-						a(href="docs") Documentation
-						p Development documentation including the full <a href="/api/">API reference</a>
-					li.nav-developer
-						a(href="developer") Development
-						p Get involved with vibe's development
-		#example-http-server
-			h2 Example of a simple HTTP server
-			pre.code.prettyprint.lang-d
-				|import vibe.d;
-				|
-				|shared static this()
-				|{
-				|	auto settings = new HTTPServerSettings;
-				|	settings.port = 8080;
-				|
-				|	listenHTTP(settings, &amp;handleRequest);
-				|}
-				|
-				|void handleRequest(HTTPServerRequest req,
-				|                   HTTPServerResponse res)
-				|{
-				|	if (req.path == "/")
-				|		res.writeBody("Hello, World!", "text/plain");
-				|}
-		#example-echo-server
-			h2 Example of an echo server
-			pre.code.prettyprint.lang-d
-				|import vibe.d;
-				|
-				|shared static this()
-				|{
-				|	listenTCP(7, (conn) { conn.write(conn); });
-				|}
-		.clear
+block body
 
-		p * Still work-in-progress, implemented by the <a target="_blank" class="extern" hreF="https://github.com/rejectedsoftware/vibedist">vibedist</a> project.
+	section#who_are_you
+		h2 엑투스를 소개합니다
+
+		p 엑투스는 공동체 통화(Comunity Currency) 보급에 필요한  모든 서비스를 제공합니다. 우리가 제공하는 서비스는 지역의 자원 및 욕구 조사, 통화 모형 설계, 통화 IT 시스템 구축 및 관리 서비스를 포함합니다. 엑투스는 공동체 통화에 대한 체계적인 서비스를 제공하는 한국 최초의 전문 기관입니다. 우리는 공동체 통화의 보급과 교육을 통해 사회를 풍요롭게 할 수 있는 임무에 헌신합니다.
+ 
+		p 엑투스는 지속 가능한 경제 활동, 사회 발전, 생태적 균형에 도달하는 도구로 공동체 통화를 사용하는 공공 기관, 기업, 금융 기관, 시민 단체 및 시민을 지원합니다.  우리는 지역 통화에 대한 정부 정책, IT 개발, 지불 거래 플랫폼을 설계, 실행 및 운영 관리 하는 일과 법률에 걸쳐 전문 지식을 연구 개발하고 있습니다. 엑투스 협동조합은 공동체 통화의 긍정적 영향을 극대화하는 컨설팅과  혁신 도구의 개발을 통해 사회 변화를 추구합니다.
+
+	section#mission
+		h2 우리의 사명
+
+		p 공동체 통화는 공동체가 지향하는 목표를 달성 할 수 있도록 돕는 비용 효율적이고 지속 가능한 도구입니다. 엑투스 협동조합은 새로운 공동체 통화의 보급을 통해 사회 혁신, 지속 가능성 및 지역 재생의 목표를 실현하려는 지역 사회, 정부 기관, 기업 및 금융 기관을 지원합니다.명
+
+		ul
+			li 지역 경제 발전을 자극
+			li 중소 기업의 안정성 강화를 통한 번영
+			li 지역 사회에 적극적으로 시민 역량 강화
+			li 시민의 관심과 자발적인 도움을 강화
+			li 친환경 행동에 대한 소비자 편익 제공
+
+	

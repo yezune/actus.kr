@@ -28,6 +28,9 @@ html(lang="en-US")
 					a(href="http://actus.kr/")
 						img#logo(src="#{req.rootDir}images/logo-small.png", alt='actus logo')
 
+					#title
+						h1 #{title}
+
 			block plainbody
 
 			- if( title.length )
@@ -35,13 +38,15 @@ html(lang="en-US")
 					#navigation
 						nav#global-nav
 							ul
-								- auto pages = ["엑투스는","about", "무엇을 하나요?","what", "어떻게 하나요?","how", "왜 공동체 화폐인가요?","why", "블로그","blog", "연락처","contact"];
+								- auto pages = ["엑투스는","about", "무엇을 하나요?","what", "어떻게 하나요?","how", "왜 공동체 통인가요?","why", "블로그","blog", "연락처","contact"];
 								- for( auto i = 0; i < pages.length; i += 2 )
 									li(class='nav-#{i > 0 ? pages[i+1] : "home"}')
 										a(class='#{pages[i] == title ? "active" : ""}', href="#{req.rootDir~pages[i+1]}")= pages[i]
-					#maincontent
-						h1 #{title}
 
+						nav#document-nav
+							block navigation	
+
+					#maincontent
 						block body
 
 				.clear

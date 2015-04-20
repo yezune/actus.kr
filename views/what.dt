@@ -3,65 +3,29 @@ extends layout
 block title
 	- string title = "무엇을 하나요?";
 
-block navigation
-	ul
-		li
-			a(href="#description") What is vibe.d?
-		li
-			a(href="#motivation") Why vibe.d?
-		li
-			a(href="#who") Who makes vibe.d?
-		li
-			a(href="#license") License
-
 block body
 
 	section#description
-		h2 What is vibe.d?
+		h2 수원 시민 화폐
 
-		p The foremost purpose of vibe.d is to provide a toolkit for doing asynchronous I/O in a familiar and natural procedural style. It combines the intuitive and efficient programming style of synchronous I/O with the scalability of asynchronous I/O.
+		img.rightFlow(src="images/suwoncoin_poster.jpg")
 
-		p Apart from actual I/O operations, it provides all the usual primitives for general programming tasks, such as timers, message passing, synchronization primitives (mutexes and condition variables), pipes and more. Care has also been taken to make sure that it integrates well with the event loop for the user interface, so that it can be used to power GUI based applications, too.
+		p '수원시민화폐'는 전자화폐형 대안화폐 실험으로는 국내 처음으로 실시하는 것으로, 지역 내 상권의 활성화, 사회적 경제 및 마을 만들기와 연계해 수원시의 자립과 순환경제 생태계를 가꾸어 가는데 이바지할 것으로 내다보고 있다. 
 
-	section#motivation
-		h2 Why vibe.d?
+		p '수원시민화폐'는 기존의 지역 화폐의 장점을 온라인상에서 유통하도록 설계해 운영되는 대안 화폐이다. 
 
-		p Web development has seen a huge innovative jump in the last years. Frameworks such as
-			a.extern(href="http://rubyonrails.org/") Ruby on Rails
-			| or 
-			a.extern(href="http://nodejs.org/") node.js
-			| and several other frameworks have changed the landscape of the CGI and PHP based 
-			| web considerably.
+		p 이를 위해 지난 12일 현재 솔대노리까페, 한두레의료생협, 우우화로구이, 바른두레생협(매탄·천천·영통·호매실점), 퀵기사협동조합 등 20곳이 수원시민화폐 가맹점으로 참여하고 있다. 사무국은 가맹점도 추가모집 중이다. 
 
-		p New programming paradigms have emerged to make web apps manageable to facilitate a 
-			| clean application design. Node.js was the first to succeed in bringing the
-			| performance of asynchronous I/O to the masses - albeit at the cost of a
-			| convoluted programming style using callbacks and with a dynamically typed
-			| language that relies heavily on unit tests to catch common programming errors.
+		p 이와 함께 사무국은 수원 정자동, 만석공원 등 장안구 지역을 중심으로 가맹점과 사용자를 모아 거래를 활성화할 예정이다. 
 
-		p With vibe.d we are trying to bring the highest performance possible together with a
-			| programming interface that is as clean as possible. At the same time the choice of
-			a.extern(href="http://dlang.org/") D
-			| as the programming language leads to code that provides much less potential for errors
-			| thanks to it's comprehensive static type system. Still, D's clean syntax gives you
-			| nearly the same lean programming experience as in dynamically typed scripting languages.
+		p 수원시민화폐를 통해 거래하려는 시민은 보증금 10만원과 '수원시민화폐' 가입서를 작성해 수원시민화폐 사무국(070-4062-8413) 혹은 네이버 카페 '수원시민화폐'에 제출하면 된다. 
 
-		p The combination is a very fast and practical system that provides a solid basis for many typical web applications and services, as well as non-web services.
+		p 사무국은 휴대전화를 통해 10만원에 상당하는 10만 수원(수원은 수원시민화폐 화폐단위)으로 바꿔 준다. 지역화폐에 참여한 가맹점과 사용자들은 상호 필요한 물품과 서비스를 거래하고 결재는 수원시민화폐로 하면 된다.
 
-	section#who
-		h2 Who makes vibe.d?
+		p 앞서 지난 1년 동안 수원시민화폐의 추진을 위해 솔대노리협동조합과 한두레의료생협, 지역복지협동경제연구소, 수원의제21추진협의회, 엑투스협동조합, 서동수디자인연구소 등이 힘을 모아왔다. 수원시민화폐의 성공적인 추진을 위해 수원지역협동조합협의회도 함께 참여했다. 
 
-		p We are a small group of people that was tired of slow, bloated or inconvenient frameworks or languages for web application development. Node.js was a promising change with its speed and the rich set of extension libraries. However, the complete reliance on callbacks makes node.js code quite involved to read and write. And worse, error handling is far too easy to ignore. After realizing that fibers would be the ideal tool to keep the performance and memory benefits of event based I/O while getting back the simplicity of blocking I/O, the idea of vibe.d was born.
+		p 한편 수원시민화폐 출범식은 15일 오후 7시 장안구청 대회의실에서 열린다. 이날 물품을 구매하고 '수원시민화폐'를 통해 결재하면서 지역대안화폐의 가치와 가능성을 실험하게 된다. 
+ 
+		p 사무국은 15일부터 12월15일까지 3개월 동안 실험을 거쳐 가능성과 문제점들을 평가해 이를 보완한 뒤 내년부터 본격 추진을 계획하고 있다. 
 
-	section#license
-		h2 License
-
-		p vibe.d is licensed under the terms of the MIT public license:
-		
-		pre Copyright (c) 2012-2014, rejectedsoftware e.K.
-			|
-			|Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-			|
-			|The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-			|
-			|THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+	
