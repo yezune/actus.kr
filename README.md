@@ -1,4 +1,4 @@
-vibed.org
+actus.kr
 =========
 
-The [vibed.org](http://vibed.org) website - home for [vibe.d](https://github.com/rejectedsoftware/vibe.d/)
+The [actus.kr](http://actus.kr) website - home for [actus.kr](https://github.com/actus/actus.kr/)
