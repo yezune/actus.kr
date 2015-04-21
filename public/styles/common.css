@@ -317,14 +317,14 @@ nav#global-nav li {
 }
 
 
-li.nav-home { background-image: url(../images/ico_home.png); }
-li.nav-download { background-image: url(../images/ico_download.png); }
-li.nav-features { background-image: url(../images/ico_features.png); }
-li.nav-about { background-image: url(../images/ico_about.png); }
+li.nav-who { background-image: url(../images/ico_who.png); }
+li.nav-what { background-image: url(../images/ico_what.png); }
+li.nav-how { background-image: url(../images/ico_how.png); }
+li.nav-why { background-image: url(../images/ico_why.png); }
 li.nav-blog { background-image: url(../images/ico_blog.png); }
-li.nav-docs { background-image: url(../images/ico_docs.png); }
-li.nav-community { background-image: url(../images/ico_community.png); }
+li.nav-about { background-image: url(../images/ico_about.png); }
 li.nav-developer { background-image: url(../images/ico_developer.png); }
+li.nav-download { background-image: url(../images/ico_download.png); }
 
 /******************************************************************************/
 /* Container                                                                  */

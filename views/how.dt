@@ -6,7 +6,7 @@ block title
 block navigation
 	ul
 		li
-			a(href="#currency_professional") 공동체 통화의 전문가
+			a(href="#currency_professional") 공동체 통화 전문가
 			ul
 				li
 					a(href="#research") 연구개발
@@ -30,7 +30,7 @@ block navigation
 				li
 					a(href="#demoscoin") 데모스코인(Demoscoin - 블록체인 2.0)
 block body
-	h1 공동체 통화의 전문가
+	h1 공동체 통화의 지속가능성 엑투스가 도와드립니다
 	
 	section#research
 		h2 연구개발

@@ -27,9 +27,10 @@ html(lang="en-US")
 				#logo-line
 					a(href="http://actus.kr/")
 						img#logo(src="#{req.rootDir}images/logo-small.png", alt='actus logo')
-
 					#title
 						h1 #{title}
+					//- img(src="#{req.rootDir}images/colored-coins.png", alt='colored coin list', style="position:absolute; top: 0; right: 0;")
+					img(src="#{req.rootDir}images/beta_brown.png", alt="beta banner", style="position:absolute; top: 0; right: 0;")
 
 			block plainbody
 
@@ -38,10 +39,12 @@ html(lang="en-US")
 					#navigation
 						nav#global-nav
 							ul
-								- auto pages = ["엑투스는","about", "무엇을 하나요?","what", "어떻게 하나요?","how", "왜 공동체 통화인가?","why", "왜 공동체 통화인가?","why", "블로그","blog", "연락처","contact"];
+								- auto pages = ["엑투스는","who", "무엇을 하나요?","what", "어떻게 하나요?","how", "왜 공동체 통화인가?","why", "블로그","blog", "연락처","about"];
 								- for( auto i = 0; i < pages.length; i += 2 )
-									li(class='nav-#{i > 0 ? pages[i+1] : "home"}')
+									li(class='nav-#{i > 0 ? pages[i+1] : "who"}')
 										a(class='#{pages[i] == title ? "active" : ""}', href="#{req.rootDir~pages[i+1]}")= pages[i]
+							
+
 
 						nav#document-nav
 							block navigation	

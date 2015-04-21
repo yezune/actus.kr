@@ -8,13 +8,13 @@ version(Have_vibelog) import vibelog.vibelog;
 
 string s_latestVersion = "0.7.18";
 
-//void download(HTTPServerRequest req, HTTPServerResponse res)
-//{
-//	if( auto pf = "file" in req.query ){
-//		if( (*pf).startsWith("zipball") ) res.redirect("https://github.com/actus/actus.kr/" ~ *pf);
-//		else res.redirect("http://actus.kr/files/" ~ *pf);
-//	} else res.render!("download.dt", req);
-//}
+void download(HTTPServerRequest req, HTTPServerResponse res)
+{
+	if( auto pf = "file" in req.query ){
+		if( (*pf).startsWith("zipball") ) res.redirect("https://github.com/actus/actus.kr/" ~ *pf);
+		else res.redirect("http://actus.kr/files/" ~ *pf);
+	} else res.render!("download.dt", req);
+}
 
 void error(HTTPServerRequest req, HTTPServerResponse res, HTTPServerErrorInfo error)
 {
@@ -109,7 +109,7 @@ shared static this()
 	auto settings = new HTTPServerSettings;
 	settings.hostName = "actus.kr";
 	settings.port = 8003;
-	settings.bindAddresses = ["127.0.0.1"];
+	//settings.bindAddresses = ["127.0.0.1"];
 	settings.errorPageHandler = toDelegate(&error);
 	
 	auto router = new URLRouter;
@@ -126,6 +126,8 @@ shared static this()
 	router.get("/about",     staticTemplate!"about.dt");
 	router.get("/blog",     staticTemplate!"blog.dt");
 	router.get("/contact",   staticTemplate!"contact.dt");
+	router.get("/download",   staticTemplate!"download.dt");
+
 
 
 	auto fsettings = new HTTPFileServerSettings;
@@ -161,6 +163,6 @@ shared static this()
 
 	listenHTTP(settings, router);
 
-	//updateDownloads();
-	//setTimer(10.seconds(), {updateDownloads();}, true);
+	updateDownloads();
+	setTimer(10.seconds(), {updateDownloads();}, true);
 }

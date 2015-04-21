@@ -10,7 +10,6 @@ block navigation
 		li
 			a(href="#mission") 우리의 사명
 
-
 block body
 
 	section#who_are_you
@@ -27,9 +26,10 @@ block body
 
 		ul
 			li 지역 경제 발전을 자극
-			li 중소 기업의 안정성 강화를 통한 번영
-			li 지역 사회에 적극적으로 시민 역량 강화
-			li 시민의 관심과 자발적인 도움을 강화
-			li 친환경 행동에 대한 소비자 편익 제공
+			li 중소상공인의 안정성 강화
+			li 지역 사회의 시민 역량 강화
+			li 시민의 관심과 자발적인 협동
+			li 친환경 소비 인센티브 도구
+
 
 	
