@@ -6,6 +6,9 @@ language: d
 
 d:
   - dmd-2.066.1
+  
+services:
+  - mongodb
 
 before_install:
   #- mkdir ${HOME}/actus.kr/public/files
