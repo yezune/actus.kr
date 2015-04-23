@@ -27,10 +27,16 @@ html(lang="en-US")
 				#logo-line
 					a(href="http://actus.kr/")
 						img#logo(src="#{req.rootDir}images/logo-small.png", alt='actus logo')
+						img(src="#{req.rootDir}images/beta_brown_small.png", alt="beta banner"")
 					#title
 						h1 #{title}
 					//- img(src="#{req.rootDir}images/colored-coins.png", alt='colored coin list', style="position:absolute; top: 0; right: 0;")
-					img(src="#{req.rootDir}images/beta_brown.png", alt="beta banner", style="position:absolute; top: 0; right: 0;")
+					div(style="position:absolute; top: 10; right: 0;")
+						img(src="#{req.rootDir}images/coins/suwoncoin.png")
+						img(src="#{req.rootDir}images/coins/sungnamcoin.png")
+						img(src="#{req.rootDir}images/coins/gwangincoin.png")
+						img(src="#{req.rootDir}images/coins/new_coin.png")
+
 
 			block plainbody
 
