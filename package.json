@@ -5,6 +5,7 @@
 	"copyright": "Copyright © 2008-2015 actus coop.",
 	"dependencies": {
 		"vibe-d": "~>0.7.22",
+		"vibelog": "~master"
 	},
 	"versions": ["VibeDefaultMain"]
 }

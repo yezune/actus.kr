@@ -1,7 +1,7 @@
 extends layout
 
 block title
-	- string title = "공동체 통화 파트너";
+	- string title = "엑투스는";
 
 block navigation
 	ul

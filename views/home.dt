@@ -6,15 +6,16 @@ block title
 block navigation
 	ul
 		li
-			a(href="#who_are_you") 엑투스를 소개합니다
+			a(href="#who_are_you") 공동체 통화 전문가
 		li
 			a(href="#mission") 우리의 사명
 
 
 block body
 
+
 	section#who_are_you
-		h2 엑투스를 소개합니다
+		h2 대안화폐, 지역화폐, 지역상품권의 파트너
 
 		p 엑투스는 공동체 통화(Comunity Currency) 보급에 필요한  모든 서비스를 제공합니다. 우리가 제공하는 서비스는 지역의 자원 및 욕구 조사, 통화 모형 설계, 통화 IT 시스템 구축 및 관리 서비스를 포함합니다. 엑투스는 공동체 통화에 대한 체계적인 서비스를 제공하는 한국 최초의 전문 기관입니다. 우리는 공동체 통화의 보급과 교육을 통해 사회를 풍요롭게 할 수 있는 임무에 헌신합니다.
  

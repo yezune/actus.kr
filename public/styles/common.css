@@ -24,30 +24,48 @@ table { border-collapse: collapse; border-spacing: 0; }
   font-weight: bold;
   src: local('Gentium Basic Bold Italic'), local('GentiumBasic-BoldItalic'), url('../fonts/gentiumbasic700i.woff') format('woff');
 }*/
-@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
-/*
-@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
-*/
-@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
-/*@import url(http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
-@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
-@import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
-*/
 
-/*.hn {font-family: 'Hanna';}
-.nbs {font-family: 'Nanum Brush Script';}
-.ng {font-family: 'Nanum Gothic';}
-.ngc {font-family: 'Nanum Gothic Coding';}
-.nm {font-family: 'Nanum Myeongjo';}
-.nps {font-family: 'Nanum Pen Script';}
-*/
 /*@font-face {
   font-family: 'Droid Serif';
   font-style: normal;
   font-weight: 400;
   src: local('Droid Serif'), local('DroidSerif'), url('../fonts/droidserif400r.woff') format('woff');
 }*/
+
+/*
+@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+*/
+
+
+/*
+ * Nanum Gothic (Korean) http://www.google.com/fonts/earlyaccess
+ */
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot);
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.ttf) format('truetype');
+}
+/*@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);*/
+@font-face {
+  font-family: 'Hanna';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/ea/hanna/v3/BM-HANNA.eot);
+  src: url(//fonts.gstatic.com/ea/hanna/v3/BM-HANNA.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/hanna/v3/BM-HANNA.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/hanna/v3/BM-HANNA.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/hanna/v3/BM-HANNA.ttf) format('truetype');
+}
 
 h1, h2, h3, h4 {
 	font-family: 'Nanum Gothic', serif;
@@ -57,7 +75,7 @@ h1, h2, h3, h4 {
 
 body {
 	background-color: #333333;
-	font-family: "Hana", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Nanum Gothic", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-size: 10pt;
 	line-height: 14pt;
 	color: #cccccc;
@@ -323,6 +341,7 @@ li.nav-how { background-image: url(../images/ico_how.png); }
 li.nav-why { background-image: url(../images/ico_why.png); }
 li.nav-blog { background-image: url(../images/ico_blog.png); }
 li.nav-about { background-image: url(../images/ico_about.png); }
+li.nav-contact { background-image: url(../images/ico_contact.png); }
 li.nav-developer { background-image: url(../images/ico_developer.png); }
 li.nav-download { background-image: url(../images/ico_download.png); }
 

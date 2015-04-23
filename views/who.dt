@@ -1,7 +1,7 @@
 extends layout
 
 block title
-	- string title = "공동체 통화 파트너";
+	- string title = "엑투스는";
 
 block navigation
 	ul
@@ -12,6 +12,13 @@ block navigation
 
 
 block body
+
+	section#coins
+		p
+			img(src="#{req.rootDir}images/coins/suwoncoin.png")
+			img(src="#{req.rootDir}images/coins/sungnamcoin.png")
+			img(src="#{req.rootDir}images/coins/gwangincoin.png")
+			img(src="#{req.rootDir}images/coins/new_coin.png")
 
 	section#who_are_you
 		h2 엑투스를 소개합니다
