@@ -36,10 +36,11 @@ table { border-collapse: collapse; border-spacing: 0; }
 /*
 @import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
-@import url(http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
 @import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
 @import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
 */
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
 
 
 /*
@@ -55,8 +56,9 @@ table { border-collapse: collapse; border-spacing: 0; }
        url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff) format('woff'),
        url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.ttf) format('truetype');
 }
+
 /*@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);*/
-@font-face {
+/*@font-face {
   font-family: 'Hanna';
   font-style: normal;
   font-weight: 400;
@@ -66,7 +68,7 @@ table { border-collapse: collapse; border-spacing: 0; }
        url(//fonts.gstatic.com/ea/hanna/v3/BM-HANNA.woff) format('woff'),
        url(//fonts.gstatic.com/ea/hanna/v3/BM-HANNA.ttf) format('truetype');
 }
-
+*/
 h1, h2, h3, h4 {
 	font-family: 'Nanum Gothic', serif;
 	font-weight: 400;
@@ -75,10 +77,10 @@ h1, h2, h3, h4 {
 
 body {
 	background-color: #333333;
-	font-family: "Nanum Gothic", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Nanum Gothic", serif;
 	font-size: 10pt;
-	line-height: 14pt;
-	color: #cccccc;
+	line-height: 18pt;
+	color: #ffffff;
 
 	background-image: url(../images/back-top.png), url(../images/back.png);
 	background-repeat: repeat-x, repeat;
@@ -136,7 +138,7 @@ a.download:hover {
 }
 
 pre, code {
-	font-family: 'Consolas', 'Courier New', monospace;
+	font-family: 'Nanum Gothic', serif;
 	font-size: 10pt;
 	font-weight: bold;
 }
@@ -377,7 +379,7 @@ li.nav-download { background-image: url(../images/ico_download.png); }
 }
 
 #container h3 {
-	font-family: 'Arial', sans-serif;
+	font-family: 'Nanum Gothic', sans-serif;
 	font-weight: normal;
 	font-style: normal;
 	font-size: 10pt;
