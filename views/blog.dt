@@ -1,8 +1,8 @@
 extends layout
 
 block title
-	- string title = "블로그";
+	- string title = "";
 
-block body
+block plainbody
 
-	p [준비중입니다]
+	p <iframe src="https://socialcreditcoin.blogspot.kr" width="1000" height="600" frameborder="0" style="border:0"></iframe>
