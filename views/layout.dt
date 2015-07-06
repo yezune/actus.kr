@@ -33,7 +33,7 @@ html(ng-app, lang="en-US")
 			#header
 				#logo-line
 					a(href="http://actus.kr/")
-						img#logo(src="#{req.rootDir}images/logo-small-gray.png", alt='actus logo')
+						img#logo(src="#{req.rootDir}images/logo-small.png", alt='actus logo')
 
 					#title
 						- for( auto i = 0; i < pages.length; i += 2 )
